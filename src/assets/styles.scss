@@ -1,0 +1,119 @@
+@import url("https://indestructibletype.com/fonts/Jost.css");
+@import "./variables.scss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#app {
+  font-family: "Jost", Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin: 0 auto;
+  flex: 1 0 auto;
+}
+
+.container {
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-rows: auto 1fr auto auto;
+  grid-template-areas:
+    "navbar"
+    "settings"
+    "content";
+  place-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1rem;
+  margin: 1rem;
+
+  width: fit-content;
+  width: -moz-fit-content; /* Firefox/Gecko */
+  width: -webkit-fit-content; /* Chrome */
+}
+
+.navbar {
+  grid-area: navbar;
+  margin: 2rem 0;
+}
+.settings {
+  grid-area: settings;
+  // align-self: start;
+  // justify-self: end;
+}
+.content {
+  grid-area: content;
+  padding: 1rem;
+  section {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px;
+  }
+  margin-bottom: 5rem;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1rem;
+  color: $violet;
+
+  &:hover {
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.3));
+  }
+}
+
+@media (min-width: 720px) {
+  .container {
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "navbar navbar settings"
+      "content content content";
+    max-width: 1024px;
+    width: 90vw;
+  }
+
+  .content {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 2fr 1fr;
+    // grid-template-rows: auto;
+    grid-template-areas:
+      "welcome about"
+      "projects about"
+      "projects contact"
+      "projects .";
+  }
+
+  #welcome {
+    grid-area: welcome;
+  }
+  #about {
+    grid-area: about;
+  }
+  #projects {
+    grid-area: projects;
+  }
+  #contact {
+    grid-area: contact;
+  }
+}
