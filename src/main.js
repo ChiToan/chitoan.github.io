@@ -61,7 +61,7 @@ const store = createStore({
   },
 });
 
-let app = createApp(App);
+const app = createApp(App);
 app.use(store);
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.mount("#app");
