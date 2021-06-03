@@ -1,4 +1,3 @@
-import { ComponentCustomProperties } from 'vue'
 import { Store } from 'vuex'
 
 declare module '@vue/runtime-core' {
@@ -6,7 +5,8 @@ declare module '@vue/runtime-core' {
   interface State {
     number: number,
     interval: number,
-    moving: boolean
+    moving: boolean,
+    shuffle: boolean
   }
 
   interface ComponentCustomProperties {
