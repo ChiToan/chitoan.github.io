@@ -1,7 +1,7 @@
 <template>
   <Background />
   <div class="container">
-    <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
+    <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
 
     <div class="card navbar">
       <Navigation />
@@ -35,29 +35,19 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import Background from "./components/Background.vue";
-import BackgroundSettings from "./components/BackgroundSettings.vue";
-import Navigation from "./components/Navigation.vue";
-import About from "./components/About.vue";
-import Projects from "./components/Projects.vue";
-import Contact from "./components/Contact.vue";
+<script setup>
+import HelloWorld from './components/HelloWorld.vue'
+import Background from "./components/Background.vue"
+import BackgroundSettings from "./components/BackgroundSettings.vue"
+import Navigation from "./components/Navigation.vue"
+import About from "./components/About.vue"
+import Projects from "./components/Projects.vue"
+import Contact from "./components/Contact.vue"
 // import HelloWorld from "./components/HelloWorld.vue"
-import "./assets/styles.scss";
+import "./assets/styles.scss"
 
-export default defineComponent({
-  name: "App",
-  components: {
-    Background,
-    BackgroundSettings,
-    Navigation,
-    About,
-    Projects,
-    Contact,
-    // HelloWorld
-  },
-});
+// This starter template is using Vue 3 experimental <script setup> SFCs
+// Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
 </script>
 
 <style lang="scss" scoped src="./assets/styles.scss">
