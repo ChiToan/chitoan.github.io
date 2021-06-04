@@ -3,16 +3,14 @@
   <div class="container">
     <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
 
-    <div class="card navbar">
+    <div class="navbar">
       <Navigation />
-    </div>
-    <div class="settings">
       <BackgroundSettings />
     </div>
     <div class="content">
       <section id="welcome" class="card section">
         <h2><font-awesome-icon :icon="['fas', 'home']" /><br />Welcome</h2>
-        <p>This is my page WIP</p>
+        <p>This is my page (WIP!)</p>
         <p>
           Et ipsum amet irure fugiat ex ex cillum. Reprehenderit fugiat
           consequat ex magna nostrud occaecat ad sit reprehenderit esse

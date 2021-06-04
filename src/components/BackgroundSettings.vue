@@ -1,17 +1,19 @@
-<template>
-  <transition name="settings">
-    <div v-show="opened" class="card">
+<template>  
+  <transition name="settings" mode="out-in">
+    <div v-if="opened" class="card">
       <div class="triangle-player-header">
         <!-- <div class="triangle-up"></div> -->
         <div class="chip">
           <div class="chip-head">
             {{ this.$store.state.number }}
           </div>
-          <div class="chip-content">Triangles</div>
+          <div class="chip-content"><div class="triangle-up"></div></div>
         </div>
-
+        <h4>
+        Background settings
+        </h4>
         <button @click="opened = false" class="icon-btn btn-small">
-          <font-awesome-icon :icon="['fas', 'times']" />
+          <font-awesome-icon :icon="['fas', 'compress-alt']" />
         </button>
       </div>
       <div class="triangle-player">
@@ -55,10 +57,7 @@
         </button>
       </div>
     </div>
-  </transition>
-  
-  <transition name="settings">
-  <div v-show="!opened">
+  <div v-else class="settings-icon">
     <button @click="opened = true" class="icon-btn">
       <font-awesome-icon :icon="['fas', 'cog']" />
     </button>
@@ -105,6 +104,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  h4 {
+    margin: 0;
+  }
 }
 
 .icon-btn {
@@ -150,9 +153,9 @@ export default {
 .triangle-up {
   width: 0;
   height: 0;
-  border-left: 1rem solid transparent;
-  border-right: 1rem solid transparent;
-  border-bottom: 2rem solid $green;
+  border-left: 0.75rem solid transparent;
+  border-right: 0.75rem solid transparent;
+  border-bottom: 1.25rem solid grey;
 }
 
 .header-title {
@@ -199,15 +202,15 @@ export default {
 
 .settings-enter-from,
 .settings-leave-to {
-  transform: translateX(20px);
-  visibility: hidden;
-  height: 0;
-  // margin: 0;
+  transform: translateY(20px);
+  // visibility: hidden;
+  // height: 0;
+  // width: 0;
   opacity: 0;
 }
 
 .settings-enter-active,
 .settings-leave-active {
-  transition: all 0.3s ease-out;
+  transition: all 0.25s ease;
 }
 </style>

@@ -21,6 +21,7 @@ import {
   faExternalLinkAlt,
   faFastForward,
   faFastBackward,
+  faCompressAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -48,6 +49,7 @@ library.add(
   faExternalLinkAlt,
   faFastForward,
   faFastBackward,
+  faCompressAlt,
 );
 
 const store = createStore({

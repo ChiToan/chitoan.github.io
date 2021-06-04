@@ -112,7 +112,7 @@
     flex-wrap: nowrap;
 
     a {
-      margin-right: 1rem;
+      margin: 1rem;
     }
   }
 }
