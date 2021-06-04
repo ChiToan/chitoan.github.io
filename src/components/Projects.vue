@@ -1,7 +1,7 @@
 <template>
   <h2>
     <font-awesome-icon :icon="['fas', 'list']" /><br />
-    Projects I participated in development
+    Projects I've worked on
   </h2>
   <ul class="projects-list">
     <li>
@@ -91,12 +91,16 @@
   flex-wrap: wrap;
   justify-content: center;
 
+  a {
+    padding: 0;
+  }
+
   img {
     max-width: 320px;
     box-shadow: 1px 1px 4px rgba($color: black, $alpha: 0.5);
     // float: left;
 
-    &:hover {
+    &:hover, &:active {
       filter: none;
       box-shadow: 2px 2px 8px rgba($color: black, $alpha: 0.5);
     }
@@ -106,6 +110,10 @@
 @media (min-width: 1080px) {
   .project-content {
     flex-wrap: nowrap;
+
+    a {
+      margin-right: 1rem;
+    }
   }
 }
 </style>>

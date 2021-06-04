@@ -16,8 +16,9 @@
 
 <style lang="scss">
 .profile-img {
-  width: 300px;
-  height: 300px;
-  border-radius: 150px;
+  width: 100%;
+  max-width: 300px;
+  // height: auto;
+  border-radius: 100%;
 }
 </style>

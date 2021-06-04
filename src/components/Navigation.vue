@@ -14,7 +14,7 @@
   justify-content: space-evenly;
   a {
     max-width: 6ch;
-    padding: 0.6em;
+    padding: 0.5rem;
   }
 }
 </style>
