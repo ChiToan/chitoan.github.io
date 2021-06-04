@@ -25,7 +25,7 @@ body {
 
 .container {
   display: grid;
-  gap: 1rem 1rem;
+  grid-gap: 1rem;
   grid-template-rows: auto 1fr auto auto;
   grid-template-areas:
     "navbar"
@@ -38,8 +38,8 @@ body {
 .card {
   background: rgba(255, 255, 255, 0.6);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 1rem;
@@ -52,20 +52,19 @@ body {
 
 .navbar {
   grid-area: navbar;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 .settings {
   grid-area: settings;
-  // align-self: start;
-  // justify-self: end;
 }
 .content {
   grid-area: content;
-  padding: 1rem;
+  // padding: 1rem;
   section {
     margin-left: auto;
     margin-right: auto;
     min-width: 300px;
+    max-width: calc(100% - 4rem);
   }
   margin-bottom: 5rem;
 }
@@ -93,6 +92,9 @@ a {
   }
 
   .content {
+    section {
+      max-width: 100%;
+    }
     display: grid;
     grid-gap: 1em;
     grid-template-columns: 2fr 1fr;

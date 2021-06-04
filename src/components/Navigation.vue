@@ -13,7 +13,8 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   a {
-    width: 6ch;
+    max-width: 6ch;
+    padding: 0.6em;
   }
 }
 </style>
