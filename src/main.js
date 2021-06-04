@@ -13,15 +13,16 @@ import {
   faPause,
   faPlus,
   faMinus,
-  faTimes,
+  // faTimes,
   faSync,
   faTrash,
-  faCog,
+  // faCog,
   faLink,
   faExternalLinkAlt,
   faFastForward,
   faFastBackward,
   faCompressAlt,
+  faSlidersH,
 } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -41,15 +42,16 @@ library.add(
   faPause,
   faPlus,
   faMinus,
-  faTimes,
+  // faTimes,
   faSync,
   faTrash,
-  faCog,
+  // faCog,
   faLink,
   faExternalLinkAlt,
   faFastForward,
   faFastBackward,
   faCompressAlt,
+  faSlidersH,
 );
 
 const store = createStore({

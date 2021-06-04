@@ -9,9 +9,9 @@
           </div>
           <div class="chip-content"><div class="triangle-up"></div></div>
         </div>
-        <h4>
+        <h5>
         Background settings
-        </h4>
+        </h5>
         <button @click="opened = false" class="icon-btn btn-small">
           <font-awesome-icon :icon="['fas', 'compress-alt']" />
         </button>
@@ -58,8 +58,8 @@
       </div>
     </div>
   <div v-else class="settings-icon">
-    <button @click="opened = true" class="icon-btn">
-      <font-awesome-icon :icon="['fas', 'cog']" />
+    <button @click="opened = true" class="icon-btn btn-small">
+      <font-awesome-icon :icon="['fas', 'sliders-h']" />
     </button>
   </div>
   </transition>
@@ -105,7 +105,7 @@ export default {
   align-items: center;
   justify-content: space-between;
 
-  h4 {
+  h5 {
     margin: 0;
   }
 }
@@ -204,13 +204,12 @@ export default {
 .settings-leave-to {
   transform: translateY(20px);
   // visibility: hidden;
-  // height: 0;
   // width: 0;
   opacity: 0;
 }
 
 .settings-enter-active,
 .settings-leave-active {
-  transition: all 0.25s ease;
+  transition: all 0.4s ease-in;
 }
 </style>

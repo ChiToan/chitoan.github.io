@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar-items card">
-    <a href="#welcome"><font-awesome-icon :icon="['fas', 'home']" /> Welcome</a>
+    <a href="#"><font-awesome-icon :icon="['fas', 'home']" /> Welcome</a>
     <a href="#about"><font-awesome-icon :icon="['fas', 'user']" /> About</a>
     <a href="#projects"
       ><font-awesome-icon :icon="['fas', 'list']" /> Projects</a
@@ -18,7 +18,7 @@
   justify-content: space-evenly;
   a {
     max-width: 6ch;
-    padding: 0.5rem;
+    padding: 0.2rem 0.5rem;
   }
 }
 </style>
