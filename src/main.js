@@ -14,7 +14,8 @@ import {
   faPlus,
   faMinus,
   // faTimes,
-  faSync,
+  // faSync,
+  faRandom,
   faTrash,
   faCog,
   faLink,
@@ -24,7 +25,10 @@ import {
   faCompressAlt,
   // faSlidersH,
   faImage,
-  faAdjust,
+  // faAdjust,
+  faToggleOn,
+  faToggleOff,
+  faStopwatch,
 } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -45,7 +49,8 @@ library.add(
   faPlus,
   faMinus,
   // faTimes,
-  faSync,
+  // faSync,
+  faRandom,
   faTrash,
   faCog,
   faLink,
@@ -55,7 +60,10 @@ library.add(
   faCompressAlt,
   // faSlidersH,
   faImage,
-  faAdjust,
+  // faAdjust,
+  faToggleOn,
+  faToggleOff,
+  faStopwatch,
 );
 
 const store = createStore({

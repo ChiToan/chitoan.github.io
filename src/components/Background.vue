@@ -60,6 +60,14 @@ export default {
         }
       }
     );
+    watch(
+      () => this.interval,
+      (interval, prevInterval) => {
+        if (interval != prevInterval) {
+          this.updateMovement();
+        }
+      }
+    );
   },
   methods: {
     setTriangles(newQuantity: number) {
@@ -82,9 +90,9 @@ export default {
             borderTopWidth: size - width + "vmin",
             borderBottomWidth: width + "vmin",
             borderRightWidth: size + "vmin",
-            bottom: getRandomBetween(0, 100) + "vh",
-            right: getRandomBetween(0, 100) + "vw",
-            transform: "rotate(" + getRandomBetween(0, 360) + "deg)",
+            bottom: getRandomBetween(20, 80) + "vh",
+            right: getRandomBetween(20, 80) + "vw",
+            transform: "rotate(" + getRandomBetween(-180, 180) + "deg)",
             transition: "",
           };
           this.triangles.push(triangle);
@@ -105,9 +113,9 @@ export default {
             triangle.transition = "transform " + this.interval + "s";
             triangle.transform =
               "translate3d(" +
-              getRandomBetween(0, 100) +
+              getRandomBetween(20, 80) +
               "vw," +
-              getRandomBetween(0, 100) +
+              getRandomBetween(20, 80) +
               "vh" +
               ",0) " +
               "rotate(" +

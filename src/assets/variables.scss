@@ -1,7 +1,8 @@
 $green: #21ef8b;
 $violet: #867bff;
 $disabled: #808080;
-$softborder: #80808080;
+$soft-border: #80808080;
+$greyer: #80808040;
 
 // Light
 $font: #4d5053;
@@ -13,7 +14,7 @@ $card-border: #ffffff2e;
 $font-dark: #f0f5f8;
 $background-dark: #383a3b;
 $card-dark: #222222bb;
-$card-border-dark: #82828240;
+$card-border-dark: #82828236;
 
 @media (prefers-color-scheme: light) {
   :root {

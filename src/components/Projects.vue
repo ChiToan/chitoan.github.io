@@ -82,7 +82,7 @@
   padding: 0;
 
   li {
-    border-top: 1px solid $softborder;
+    border-top: 1px solid $soft-border;
   }
 }
 

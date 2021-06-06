@@ -11,33 +11,66 @@
       <ul class="settings-list">
         <li>
           <div class="setting">
-            Wallpaper
-            <div class="chip">
-              <div class="chip-head">
-                {{ this.$store.state.number }}
-              </div>
-              <div class="chip-content"><div class="triangle-up"></div></div>
-            </div>
+            <h4>Wallpaper</h4>
           </div>
           <div class="triangle-player">
-            <button
-              @click="removeAllTriangles"
-              class="icon-btn btn-small"
-              :disabled="noTriangles"
-            >
-              <font-awesome-icon :icon="['fas', 'trash']" />
-            </button>
+            <div class="triangle-value" title="Number of triangles">
+              {{ this.$store.state.number }}
+              <div class="triangle-up"></div>
+            </div>
             <button
               @click="removeTriangle"
               class="icon-btn"
               :disabled="noTriangles"
+              title="Remove triangle"
             >
               <font-awesome-icon :icon="['fas', 'minus']" />
+            </button>
+            <button
+              @click="this.$store.state.number++"
+              class="icon-btn"
+              title="Add triangle"
+            >
+              <font-awesome-icon :icon="['fas', 'plus']" />
+            </button>
+            <button
+              @click="this.$store.state.shuffle = true"
+              class="icon-btn btn-small"
+              :disabled="noTriangles"
+              title="Shuffle triangles"
+            >
+              <font-awesome-icon :icon="['fas', 'random']" />
+            </button>
+            <button
+              @click="removeAllTriangles"
+              class="icon-btn btn-small"
+              :disabled="noTriangles"
+              title="Remove all triangles"
+            >
+              <font-awesome-icon :icon="['fas', 'trash']" />
+            </button>
+          </div>
+          <div class="triangle-player">
+            <div
+              class="triangle-value"
+              title="Duration of movement (higher is slower)"
+            >
+              <!-- <font-awesome-icon :icon="['fas', 'stopwatch']" /> -->
+              {{ this.$store.state.interval }}s
+            </div>
+            <button
+              @click="decreaseInterval"
+              class="icon-btn"
+              :disabled="this.$store.state.interval <= 1"
+              title="Decrease movement speed"
+            >
+              <font-awesome-icon :icon="['fas', 'fast-backward']" />
             </button>
             <button
               v-if="this.$store.state.moving"
               @click="this.$store.state.moving = false"
               class="icon-btn btn-big"
+              title="Pause triangle movement"
             >
               <font-awesome-icon :icon="['fas', 'pause']" />
             </button>
@@ -48,23 +81,23 @@
             >
               <font-awesome-icon :icon="['fas', 'play']" />
             </button>
-            <button @click="this.$store.state.number++" class="icon-btn">
-              <font-awesome-icon :icon="['fas', 'plus']" />
-            </button>
             <button
-              @click="this.$store.state.shuffle = true"
-              class="icon-btn btn-small"
-              :disabled="noTriangles"
+              @mousedown="increaseInterval"
+              class="icon-btn"
+              title="Increase movement speed"
             >
-              <font-awesome-icon :icon="['fas', 'sync']" />
+              <font-awesome-icon :icon="['fas', 'fast-forward']" />
             </button>
           </div>
         </li>
         <li class="setting">
-          Invert Theme
-
-          <button @click="toggleTheme" class="icon-btn btn-small" :class="{toggled: this.$store.state.systemTheme}">
-            <font-awesome-icon :icon="['fas', 'adjust']" />
+          <h4>Invert Theme</h4>
+          <button @click="toggleTheme" class="icon-btn">
+            <font-awesome-icon
+              :icon="['fas', 'toggle-off']"
+              v-if="this.$store.state.systemTheme"
+            />
+            <font-awesome-icon :icon="['fas', 'toggle-on']" v-else />
           </button>
         </li>
       </ul>
@@ -106,6 +139,16 @@ export default {
       this.$store.state.systemTheme = !this.$store.state.systemTheme;
       // this.$store.state.dark = !this.$store.state.dark;
     },
+    increaseInterval() {
+      // this.$store.state.moving = false;
+      this.$store.state.interval++;
+    },
+    decreaseInterval() {
+      // this.$store.state.moving = false;
+      if (this.$store.state.interval > 1) {
+        this.$store.state.interval--;
+      }
+    },
   },
 };
 </script>
@@ -128,7 +171,7 @@ export default {
 
   li {
     padding: 0.75rem 0;
-    border-top: 1px solid $softborder;
+    border-top: 1px solid $soft-border;
 
     h4 {
       margin: 0.4rem 0;
@@ -143,9 +186,25 @@ export default {
   }
 }
 
+.triangle-value {
+  display: inline-flex;
+  font-size: 1.25rem;
+  font-weight: bold;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  background-color: $greyer;
+  border-radius: 1.25rem;
+  min-width: 4ch;
+  text-align: center;
+  justify-content: center;
+}
+
 .triangle-player {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  // place-content: center;
+  margin: 0.25rem 0;
 }
 
 .icon-btn {
@@ -193,55 +252,9 @@ export default {
   border-left: 0.6rem solid transparent;
   border-right: 0.6rem solid transparent;
   border-bottom: 1.2rem solid $green;
+  margin-left: 0.5ch;
 }
 
-.header-title {
-  margin: 0;
-}
-
-.chip {
-  display: inline-flex;
-  flex-direction: row;
-  // background-color: #e9e9e9;
-  border: none;
-  cursor: default;
-  height: 2rem;
-  outline: none;
-  padding: 0;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  align-items: center;
-  border-radius: 2rem;
-  vertical-align: middle;
-  text-decoration: none;
-  justify-content: center;
-}
-
-.chip-head {
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  // background-color: $green;
-  font-size: 1.25rem;
-  align-items: center;
-  user-select: none;
-  border-radius: 50%;
-  justify-content: center;
-  width: 2rem;
-  font-weight: bolder;
-  height: inherit;
-  font-size: 20px;
-  margin-right: -0.5rem;
-}
-.chip-content {
-  padding: 0 0.5rem;
-}
-
-.toggled {
-  // filter: saturate(0%);
-  color: $disabled;
-  filter: none;
-}
 
 .settings-enter-from,
 .settings-leave-to {
