@@ -82,7 +82,7 @@
   padding: 0;
 
   li {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid $softborder;
   }
 }
 
@@ -100,7 +100,8 @@
     box-shadow: 1px 1px 4px rgba($color: black, $alpha: 0.5);
     // float: left;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       filter: none;
       box-shadow: 2px 2px 8px rgba($color: black, $alpha: 0.5);
     }

@@ -16,13 +16,15 @@ import {
   // faTimes,
   faSync,
   faTrash,
-  // faCog,
+  faCog,
   faLink,
   faExternalLinkAlt,
   faFastForward,
   faFastBackward,
   faCompressAlt,
-  faSlidersH,
+  // faSlidersH,
+  faImage,
+  faAdjust,
 } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -45,22 +47,25 @@ library.add(
   // faTimes,
   faSync,
   faTrash,
-  // faCog,
+  faCog,
   faLink,
   faExternalLinkAlt,
   faFastForward,
   faFastBackward,
   faCompressAlt,
-  faSlidersH,
+  // faSlidersH,
+  faImage,
+  faAdjust,
 );
 
 const store = createStore({
   state() {
     return {
-      number: 5,
-      interval: 15,
-      moving: true,
+      number: 4,
+      interval: 20,
+      moving: false,
       shuffle: false,
+      systemTheme: true,
     };
   },
 });

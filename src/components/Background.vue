@@ -77,7 +77,7 @@ export default {
             height: 0,
             border: "0 solid transparent",
             position: "fixed",
-            zIndex: -100,
+            zIndex: 0,
             borderRightColor: getRandomColor(0.4),
             borderTopWidth: size - width + "vmin",
             borderBottomWidth: width + "vmin",

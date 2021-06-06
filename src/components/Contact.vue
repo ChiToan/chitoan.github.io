@@ -1,25 +1,39 @@
 <template>
-  <h2><font-awesome-icon :icon="['fas', 'address-card']" /><br/> 
-  Contact</h2>
+  <h2>
+    <font-awesome-icon :icon="['fas', 'address-card']" /><br />
+    Contact
+  </h2>
   <ul class="contact-info">
     <li>
-      <a href="tel:0612463062"><font-awesome-icon :icon="['fas', 'phone']" /></a>
-      <a href="https://wa.me/31612463062"><font-awesome-icon :icon="['fab', 'whatsapp']" /></a> 
-      <br/>
+      <a href="tel:+31612463062" target="_blank"
+        ><font-awesome-icon :icon="['fas', 'phone']"
+      /></a>
+      <a href="https://wa.me/31612463062" target="_blank"
+        ><font-awesome-icon :icon="['fab', 'whatsapp']"
+      /></a>
+      <br />
       +31612463062
     </li>
     <li>
-      <a href="mailto:chi.toan.luu@gmail.com"><font-awesome-icon :icon="['fas', 'envelope']" /></a>
-      <br/>
+      <a href="mailto:chi.toan.luu@gmail.com" target="_blank"
+        ><font-awesome-icon :icon="['fas', 'envelope']"
+      /></a>
+      <br />
       chi.toan.luu@gmail.com
     </li>
     <li>
-      <a href="https://github.com/ChiToan"><font-awesome-icon :icon="['fab', 'github']" /></a>
-      <br/>ChiToan
+      <a href="https://github.com/ChiToan" target="_blank"
+        ><font-awesome-icon :icon="['fab', 'github']"
+      /></a>
+      <br />ChiToan
     </li>
     <li>
-      <a href="https://www.linkedin.com/in/toan-luu"><font-awesome-icon :icon="['fab', 'linkedin']" style="padding:0 1.5px;"/></a>
-        <br/>Chi-Toan Luu
+      <a href="https://www.linkedin.com/in/toan-luu" target="_blank"
+        ><font-awesome-icon
+          :icon="['fab', 'linkedin']"
+          style="padding: 0 1.5px"
+      /></a>
+      <br />Chi-Toan Luu
     </li>
   </ul>
 </template>

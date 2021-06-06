@@ -1,5 +1,5 @@
 @import url("https://indestructibletype.com/fonts/Jost.css");
-@import "./variables.scss";
+// @import  "./color-themes.scss";
 
 html {
   scroll-behavior: smooth;
@@ -14,18 +14,32 @@ body {
 }
 
 #app {
+  flex: 1 0 auto;
   font-family: "Jost", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: $dark-font;
-  margin: 0 auto;
-  flex: 1 0 auto;
+  
+}
+
+#main {
+  font-family: "Jost", Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  text-align: center;
+  color: var(--font);
+  background-color: var(--background);
+  // @include themed() {
+  //   color: t($font);
+  //   background-color: t($background);
+  // }
 }
 
 .container {
   display: grid;
   gap: 1rem;
+  margin: 0 auto;
   // grid-template-rows: auto 1fr auto auto;
   grid-template-areas:
     "navbar"
@@ -35,12 +49,16 @@ body {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  // @include themed() {
+  //   // color: t($font);
+  //   background: t($card);
+  // }
+  background-color: var(--card);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--card-border);
   padding: 1rem;
   // margin: 1rem;
 
@@ -54,7 +72,7 @@ body {
   // margin: 1rem 0;
   width: 100%;
   position: sticky;
-  top: 0;
+  top: -1rem;
   z-index: 10;
   display: flex;
   justify-content: space-between;
@@ -67,6 +85,7 @@ body {
 
   .settings-icon {
     margin-left: auto;
+    align-self: center;
   }
 }
 .content {
@@ -104,10 +123,8 @@ a {
   }
 
   .navbar {
-
     .card,
     .settings-icon {
-      padding: 0.5rem;
       margin: 1rem 0;
     }
   }

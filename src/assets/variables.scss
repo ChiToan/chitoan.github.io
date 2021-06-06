@@ -1,4 +1,50 @@
 $green: #21ef8b;
 $violet: #867bff;
-$dark-font: #2c3e50;
-$disabled: #aaa;
+$disabled: #808080;
+$softborder: #80808080;
+
+// Light
+$font: #4d5053;
+$background: #f0f5f8;
+$card: #ffffff99;
+$card-border: #ffffff2e;
+
+// Dark
+$font-dark: #f0f5f8;
+$background-dark: #383a3b;
+$card-dark: #222222bb;
+$card-border-dark: #82828240;
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --font: #{$font};
+    --background: #{$background};
+    --card: #{$card};
+    --card-border: #{$card-border};
+  }
+
+  //   [manual-theme="dark"] {
+  .invert-theme {
+    --font: #{$font-dark};
+    --background: #{$background-dark};
+    --card: #{$card-dark};
+    --card-border: #{$card-border-dark};
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font: #{$font-dark};
+    --background: #{$background-dark};
+    --card: #{$card-dark};
+    --card-border: #{$card-border-dark};
+  }
+
+  //   [manual-theme="light"] {
+  .invert-theme {
+    --font: #{$font};
+    --background: #{$background};
+    --card: #{$card};
+    --card-border: #{$card-border};
+  }
+}
