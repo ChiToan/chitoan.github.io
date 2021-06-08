@@ -7,8 +7,13 @@
     <li>
       <h3>Résume</h3>
       <div class="project-content">
-        <a href="https://resume.win.tue.nl/" target="_blank">
-          <img src="../assets/images/resume.png" alt="19XCV.nl" />
+        <a href="https://resume.win.tue.nl/" target="_blank" rel="noopener">
+          <img
+            src="../assets/images/resume.webp"
+            alt="19XCV.nl"
+            width="320"
+            height="240"
+          />
         </a>
         <p>
           Veniam irure id sit qui fugiat deserunt sint cillum velit non. Nisi
@@ -24,8 +29,13 @@
     <li>
       <h3>V.V. Tamar</h3>
       <div class="project-content">
-        <a href="https://vvtamar.nl/" target="_blank">
-          <img src="../assets/images/vvtamar.png" alt="vvtamar.nl" />
+        <a href="https://vvtamar.nl/" target="_blank" rel="noopener">
+          <img
+            src="../assets/images/vvtamar.webp"
+            alt="vvtamar.nl"
+            width="320"
+            height="240"
+          />
         </a>
         <p>
           Deserunt adipisicing duis consectetur veniam duis nostrud do Lorem
@@ -42,10 +52,15 @@
     <li>
       <h3>Phylophile</h3>
       <div class="project-content">
-        <a href="https://chitoan.github.io/PhyloD3/" target="_blank"
+        <a
+          href="https://chitoan.github.io/PhyloD3/"
+          target="_blank"
+          rel="noopener"
           ><img
-            src="../assets/images/phylophile.png"
+            src="../assets/images/phylophile.webp"
             alt="chitoan.github.io/PhyloD3/"
+            width="320"
+            height="240"
         /></a>
         <p>
           Qui eu anim occaecat eiusmod qui et incididunt nisi consequat. Do ad
@@ -61,8 +76,12 @@
     <li>
       <h3>19.XCV</h3>
       <div class="project-content">
-        <a href="https://19xcv.nl/" target="_blank"
-          ><img src="../assets/images/19xcv.png" alt="19XCV.nl"
+        <a href="https://19xcv.nl/" target="_blank" rel="noopener"
+          ><img
+            src="../assets/images/19xcv.webp"
+            alt="19XCV.nl"
+            width="320"
+            height="240"
         /></a>
         <p>
           Eiusmod deserunt velit nulla dolor cillum. Ea esse magna dolore do
@@ -97,8 +116,8 @@
 
   img {
     max-width: 320px;
+    height: auto;
     box-shadow: 1px 1px 4px rgba($color: black, $alpha: 0.5);
-    // float: left;
 
     &:hover,
     &:active {

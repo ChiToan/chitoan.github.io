@@ -13,8 +13,8 @@ import {
   faPause,
   faPlus,
   faMinus,
-  // faTimes,
-  // faSync,
+  faTimes,
+  faSync,
   faRandom,
   faTrash,
   faCog,
@@ -23,21 +23,47 @@ import {
   faFastForward,
   faFastBackward,
   faCompressAlt,
-  // faSlidersH,
+  faSlidersH,
   faImage,
-  // faAdjust,
+  faAdjust,
   faToggleOn,
   faToggleOff,
   faStopwatch,
+  faCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faGithub, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import {
+  faCss3Alt,
+  faGithub,
+  faHtml5,
+  faJava,
+  faJs,
+  faLaravel,
+  faLinkedin,
+  faPhp,
+  faPython,
+  faReact,
+  faVuejs,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 
 library.add(
+  faCss3Alt,
   faGithub,
+  faHtml5,
+  faJava,
+  faJs,
   faLinkedin,
-  faWhatsapp,
+  faLaravel,
+  faPhp,
+  faPython,
+  faReact,
+  faVuejs,
+  faWhatsapp
+);
+
+library.add(
   faAddressCard,
   faHome,
   faList,
@@ -64,6 +90,7 @@ library.add(
   faToggleOn,
   faToggleOff,
   faStopwatch,
+  faCode
 );
 
 const store = createStore({

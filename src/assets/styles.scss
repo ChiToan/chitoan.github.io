@@ -141,6 +141,7 @@ a {
     grid-template-areas:
       "welcome about"
       "projects about"
+      "projects skills"
       "projects contact"
       "projects .";
   }
@@ -150,6 +151,9 @@ a {
   }
   #about {
     grid-area: about;
+  }
+  #skills {
+    grid-area: skills;
   }
   #projects {
     grid-area: projects;

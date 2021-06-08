@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar-items card">
-    <a href="#"><font-awesome-icon :icon="['fas', 'home']" /> Welcome</a>
+    <a href="#"><font-awesome-icon :icon="['fas', 'home']" /> Home</a>
     <a href="#about"><font-awesome-icon :icon="['fas', 'user']" /> About</a>
     <a href="#projects"
       ><font-awesome-icon :icon="['fas', 'list']" /> Projects</a

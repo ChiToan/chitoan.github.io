@@ -3,7 +3,11 @@
     <div v-if="opened" class="card">
       <div class="settings-header">
         <h3>Settings</h3>
-        <button @click="opened = false" class="icon-btn btn-small">
+        <button
+          @click="opened = false"
+          class="icon-btn btn-small"
+          aria-label="Minimise"
+        >
           <font-awesome-icon :icon="['fas', 'compress-alt']" />
         </button>
       </div>
@@ -23,6 +27,7 @@
               class="icon-btn"
               :disabled="noTriangles"
               title="Remove triangle"
+              aria-label="Remove"
             >
               <font-awesome-icon :icon="['fas', 'minus']" />
             </button>
@@ -30,6 +35,7 @@
               @click="this.$store.state.number++"
               class="icon-btn"
               title="Add triangle"
+              aria-label="Add"
             >
               <font-awesome-icon :icon="['fas', 'plus']" />
             </button>
@@ -38,6 +44,7 @@
               class="icon-btn btn-small"
               :disabled="noTriangles"
               title="Shuffle triangles"
+              aria-label="Shuffle"
             >
               <font-awesome-icon :icon="['fas', 'random']" />
             </button>
@@ -46,6 +53,7 @@
               class="icon-btn btn-small"
               :disabled="noTriangles"
               title="Remove all triangles"
+              aria-label="Clear"
             >
               <font-awesome-icon :icon="['fas', 'trash']" />
             </button>
@@ -63,6 +71,7 @@
               class="icon-btn"
               :disabled="this.$store.state.interval <= 1"
               title="Decrease movement speed"
+              aria-label="Decrease"
             >
               <font-awesome-icon :icon="['fas', 'fast-backward']" />
             </button>
@@ -71,6 +80,7 @@
               @click="this.$store.state.moving = false"
               class="icon-btn btn-big"
               title="Pause triangle movement"
+              aria-label="Pause"
             >
               <font-awesome-icon :icon="['fas', 'pause']" />
             </button>
@@ -78,6 +88,7 @@
               v-else
               @click="this.$store.state.moving = true"
               class="icon-btn btn-big"
+              aria-label="Play"
             >
               <font-awesome-icon :icon="['fas', 'play']" />
             </button>
@@ -85,6 +96,7 @@
               @mousedown="increaseInterval"
               class="icon-btn"
               title="Increase movement speed"
+              aria-label="Increase"
             >
               <font-awesome-icon :icon="['fas', 'fast-forward']" />
             </button>
@@ -92,7 +104,7 @@
         </li>
         <li class="setting">
           <h4>Invert Theme</h4>
-          <button @click="toggleTheme" class="icon-btn">
+          <button @click="toggleTheme" class="icon-btn" aria-label="Invert">
             <font-awesome-icon
               :icon="['fas', 'toggle-off']"
               v-if="this.$store.state.systemTheme"
@@ -103,7 +115,11 @@
       </ul>
     </div>
     <div v-else class="settings-icon">
-      <button @click="opened = true" class="icon-btn btn-small">
+      <button
+        @click="opened = true"
+        class="icon-btn btn-small"
+        aria-label="Settings"
+      >
         <font-awesome-icon :icon="['fas', 'cog']" />
       </button>
     </div>
@@ -254,7 +270,6 @@ export default {
   border-bottom: 1.2rem solid $green;
   margin-left: 0.5ch;
 }
-
 
 .settings-enter-from,
 .settings-leave-to {
