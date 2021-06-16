@@ -9,7 +9,7 @@
       <div class="project-content">
         <a href="https://resume.win.tue.nl/" target="_blank" rel="noopener">
           <img
-            src="../assets/images/resume.webp"
+            src="../assets/images/resume-min.png"
             alt="19XCV.nl"
             width="320"
             height="240"
@@ -31,7 +31,7 @@
       <div class="project-content">
         <a href="https://vvtamar.nl/" target="_blank" rel="noopener">
           <img
-            src="../assets/images/vvtamar.webp"
+            src="../assets/images/vvtamar-min.png"
             alt="vvtamar.nl"
             width="320"
             height="240"
@@ -57,7 +57,7 @@
           target="_blank"
           rel="noopener"
           ><img
-            src="../assets/images/phylophile.webp"
+            src="../assets/images/phylophile-min.png"
             alt="chitoan.github.io/PhyloD3/"
             width="320"
             height="240"
@@ -78,7 +78,7 @@
       <div class="project-content">
         <a href="https://19xcv.nl/" target="_blank" rel="noopener"
           ><img
-            src="../assets/images/19xcv.webp"
+            src="../assets/images/19xcv-min.png"
             alt="19XCV.nl"
             width="320"
             height="240"

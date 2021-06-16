@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { watch, watchEffect } from "vue";
 export default {
   name: "Background",
@@ -19,16 +19,16 @@ export default {
     };
   },
   computed: {
-    quantity(): number {
+    quantity() {
       return this.$store.state.number;
     },
-    interval(): number {
+    interval() {
       return this.$store.state.interval;
     },
-    moving(): boolean {
+    moving() {
       return this.$store.state.moving;
     },
-    shuffle(): boolean {
+    shuffle() {
       return this.$store.state.shuffle;
     },
   },
@@ -70,7 +70,7 @@ export default {
     );
   },
   methods: {
-    setTriangles(newQuantity: number) {
+    setTriangles(newQuantity) {
       const difference = newQuantity - this.triangles.length;
       if (newQuantity <= 0) {
         this.triangles = [];
@@ -106,38 +106,31 @@ export default {
         }
       }
     },
-    moveTriangles(moving: boolean) {
+    moveTriangles(moving) {
       if (moving) {
-        this.triangles.forEach(
-          (triangle: { transition: string; transform: string }) => {
-            triangle.transition = "transform " + this.interval + "s";
-            triangle.transform =
-              "translate3d(" +
-              getRandomBetween(20, 80) +
-              "vw," +
-              getRandomBetween(20, 80) +
-              "vh" +
-              ",0) " +
-              "rotate(" +
-              getRandomBetween(-180, 180) +
-              "deg)";
-          }
-        );
+        this.triangles.forEach((triangle) => {
+          triangle.transition = "transform " + this.interval + "s";
+          triangle.transform =
+            "translate3d(" +
+            getRandomBetween(20, 80) +
+            "vw," +
+            getRandomBetween(20, 80) +
+            "vh" +
+            ",0) " +
+            "rotate(" +
+            getRandomBetween(-180, 180) +
+            "deg)";
+        });
       } else {
         let backgroundDiv = document.getElementById("background");
-        this.triangles.forEach(
-          (
-            triangle: { transition: string; transform: string },
-            index: number
-          ) => {
-            triangle.transition = "";
-            if (backgroundDiv) {
-              triangle.transform = getComputedStyle(
-                backgroundDiv.children[index] as HTMLDivElement
-              ).transform;
-            }
+        this.triangles.forEach((triangle, index) => {
+          triangle.transition = "";
+          if (backgroundDiv) {
+            triangle.transform = getComputedStyle(
+              backgroundDiv.children[index]
+            ).transform;
           }
-        );
+        });
       }
     },
     updateMovement() {
@@ -151,7 +144,7 @@ export default {
       }
     },
     shuffleTriangles() {
-      this.triangles.forEach((triangle: any) => {
+      this.triangles.forEach((triangle) => {
         triangle.bottom = getRandomBetween(0, 100) + "vh";
         triangle.right = getRandomBetween(0, 100) + "vw";
         triangle.transform = "rotate(" + getRandomBetween(0, 360) + "deg)";
@@ -161,11 +154,11 @@ export default {
   },
 };
 
-function getRandomBetween(min: number, max: number) {
+function getRandomBetween(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function getRandomColor(alpha: string | number) {
+function getRandomColor(alpha) {
   return "hsla(" + Math.random() * 360 + ", 100%, 75%, " + alpha + ")";
 }
 </script>

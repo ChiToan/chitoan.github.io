@@ -126,7 +126,7 @@
   </transition>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   name: "Background Settings",
   data() {
@@ -135,7 +135,7 @@ export default {
     };
   },
   computed: {
-    noTriangles(): boolean {
+    noTriangles() {
       return this.$store.state.number <= 0;
     },
   },

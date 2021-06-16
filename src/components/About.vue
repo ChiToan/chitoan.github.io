@@ -1,7 +1,7 @@
 <template>
   <h2><font-awesome-icon :icon="['fas', 'user']" /><br />About me</h2>
   <img
-    src="../assets/images/profile.webp"
+    src="../assets/images/profile-min.jpg"
     width="300" height="300"
     alt="Profile Toan"
     class="profile-img"

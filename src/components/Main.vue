@@ -42,7 +42,7 @@ import Background from "./Background.vue";
 import BackgroundSettings from "./BackgroundSettings.vue";
 import Navigation from "./Navigation.vue";
 import About from "./About.vue";
-import Skills from "./Skills.vue"
+import Skills from "./Skills.vue";
 import Projects from "./Projects.vue";
 import Contact from "./Contact.vue";
 
