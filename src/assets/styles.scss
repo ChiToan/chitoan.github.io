@@ -48,10 +48,6 @@ body {
 }
 
 .card {
-  // @include themed() {
-  //   // color: t($font);
-  //   background: t($card);
-  // }
   background-color: var(--card);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
   backdrop-filter: blur(2px);
@@ -59,7 +55,6 @@ body {
   border-radius: 10px;
   border: 1px solid var(--card-border);
   padding: 1rem;
-  // margin: 1rem;
 
   width: fit-content;
   width: -moz-fit-content; /* Firefox/Gecko */
@@ -90,6 +85,7 @@ body {
 .content {
   grid-area: content;
   margin-bottom: 10rem;
+  z-index: 5;
   section {
     margin: 2rem auto;
     width: calc(100% - 3rem);
