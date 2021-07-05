@@ -8,13 +8,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
 }
 
 #app {
-  flex: 1 0 auto;
   font-family: "Jost", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,17 +19,8 @@ body {
 }
 
 #main {
-  font-family: "Jost", Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  text-align: center;
   color: var(--font);
   background-color: var(--background);
-  // @include themed() {
-  //   color: t($font);
-  //   background-color: t($background);
-  // }
 }
 
 .container {
@@ -55,18 +43,17 @@ body {
   border-radius: 10px;
   border: 1px solid var(--card-border);
   padding: 1rem;
-
-  width: fit-content;
-  width: -moz-fit-content; /* Firefox/Gecko */
-  width: -webkit-fit-content; /* Chrome */
+  // width: fit-content;
+  // width: -moz-fit-content; /* Firefox/Gecko */
+  // width: -webkit-fit-content; /* Chrome */
 }
 
 .navbar {
   grid-area: navbar;
-  // margin: 1rem 0;
+  margin: 0.5rem 0;
   width: 100%;
   position: sticky;
-  top: -1rem;
+  top: 0;
   z-index: 10;
   display: flex;
   justify-content: space-between;
@@ -74,7 +61,7 @@ body {
   flex-wrap: wrap;
 
   .card {
-    margin: 0.25rem auto;
+    margin: 0 auto;
   }
 
   .settings-icon {
