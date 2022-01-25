@@ -8,10 +8,7 @@
   />
   <p>My name is Toan</p>
   <p>
-    Occaecat id occaecat cillum voluptate tempor consequat tempor reprehenderit
-    qui do sunt Lorem consectetur cillum. Veniam sint cupidatat sunt in cillum
-    quis veniam proident elit excepteur aute non commodo excepteur. Non nisi in
-    aute aute veniam consectetur sit minim.
+    I'm a starting developer based in Harderwijk, the Netherlands. I'm currently studying software engineering at the Eindhoven University of Technology.
   </p>
 </template>
 

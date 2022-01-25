@@ -5,31 +5,49 @@
   </h2>
   <ul class="skills-list">
     <li>
-      <font-awesome-icon :icon="['fab', 'css3-alt']" />
+      <a href="https://html.spec.whatwg.org/multipage/" aria-label="HTML">
+        <font-awesome-icon :icon="['fab', 'html5']" />
+      </a>
     </li>
     <li>
-      <font-awesome-icon :icon="['fab', 'html5']" />
+      <a href="https://www.w3.org/Style/CSS/" aria-label="CSS">
+        <font-awesome-icon :icon="['fab', 'css3-alt']" />
+      </a>
     </li>
     <li>
-      <font-awesome-icon :icon="['fab', 'js']" />
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" aria-label="JavaScript">
+        <font-awesome-icon :icon="['fab', 'js']" />
+      </a>
     </li>
     <li>
-      <font-awesome-icon :icon="['fab', 'vuejs']" />
+      <a href="https://vuejs.org/" aria-label="Vue.js">
+        <font-awesome-icon :icon="['fab', 'vuejs']" />
+      </a>
     </li>
     <li>
-      <font-awesome-icon :icon="['fab', 'react']" />
+      <a href="https://reactjs.org/" aria-label="React">
+        <font-awesome-icon :icon="['fab', 'react']" />
+      </a>
     </li>
     <li>
-      <font-awesome-icon :icon="['fab', 'php']" />
+      <a href="https://www.php.net/" aria-label="PHP">
+        <font-awesome-icon :icon="['fab', 'php']" />
+      </a>
     </li>
     <li>
-      <font-awesome-icon :icon="['fab', 'laravel']" />
+      <a href="https://laravel.com/" aria-label="Laravel">
+        <font-awesome-icon :icon="['fab', 'laravel']" />
+      </a>
     </li>
     <li>
-      <font-awesome-icon :icon="['fab', 'python']" />
+      <a href="https://www.python.org/" aria-label="Python">
+        <font-awesome-icon :icon="['fab', 'python']" />
+      </a>
     </li>
     <li>
-      <font-awesome-icon :icon="['fab', 'java']" />
+      <a href="https://www.java.com/" aria-label="Java">
+        <font-awesome-icon :icon="['fab', 'java']" />
+      </a>
     </li>
   </ul>
 </template>
@@ -49,4 +67,4 @@
     // border-top: 1px solid $soft-border;
   }
 }
-</style>>
+</style>

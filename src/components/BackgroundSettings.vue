@@ -70,7 +70,7 @@
               @click="decreaseInterval"
               class="icon-btn"
               :disabled="this.$store.state.interval <= 1"
-              title="Decrease movement speed"
+              title="Increase movement speed"
               aria-label="Decrease"
             >
               <font-awesome-icon :icon="['fas', 'fast-backward']" />
@@ -95,7 +95,7 @@
             <button
               @mousedown="increaseInterval"
               class="icon-btn"
-              title="Increase movement speed"
+              title="Decrease movement speed"
               aria-label="Increase"
             >
               <font-awesome-icon :icon="['fas', 'fast-forward']" />

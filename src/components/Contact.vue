@@ -8,9 +8,9 @@
       <a href="tel:+31612463062" aria-label="Phone"
         ><font-awesome-icon :icon="['fas', 'phone']"
       /></a>
-      <a href="https://wa.me/31612463062" aria-label="WhatsApp"
+      <!-- <a href="https://wa.me/31612463062" aria-label="WhatsApp"
         ><font-awesome-icon :icon="['fab', 'whatsapp']"
-      /></a>
+      /></a> -->
       <br />
       +31612463062
     </li>

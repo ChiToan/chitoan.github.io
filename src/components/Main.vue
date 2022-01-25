@@ -10,15 +10,9 @@
       <div class="content">
         <section id="welcome" class="card section">
           <h2><font-awesome-icon :icon="['fas', 'home']" /><br />Welcome</h2>
-          <p>This is my page (WIP!)</p>
-          <p>
-            Et ipsum amet irure fugiat ex ex cillum. Reprehenderit fugiat
-            consequat ex magna nostrud occaecat ad sit reprehenderit esse
-            cupidatat sit. Labore non nulla aute sunt. Laborum laboris est
-            pariatur quis dolore cupidatat. Consequat quis ipsum qui do laborum
-            excepteur. Est deserunt cillum aliqua incididunt ullamco
-            exercitation dolor pariatur in ut duis.
-          </p>
+          <p>This is my personal information page. Here I show you some projects I've worked on and some of skills I've learned.</p>
+          <p>This page also serves as a frontend testing place for me, where I try to implement some fun functionalities and designs. 
+            For now this page has a moving triangles wallpaper, which you can play arround with in the settings.</p>
         </section>
         <section id="about" class="card section">
           <About />
