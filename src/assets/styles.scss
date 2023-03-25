@@ -9,7 +9,6 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: var(--background);
 }
 
 #app {
@@ -21,6 +20,7 @@ body {
 
 #main {
   color: var(--font);
+  background-color: var(--background);
 }
 
 .container {
