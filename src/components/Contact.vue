@@ -5,16 +5,6 @@
   </h2>
   <ul class="contact-info">
     <li>
-      <a href="tel:+31612463062" aria-label="Phone"
-        ><font-awesome-icon :icon="['fas', 'phone']"
-      /></a>
-      <a href="https://api.whatsapp.com/send?phone=31612463062" aria-label="WhatsApp"
-        ><font-awesome-icon :icon="['fab', 'whatsapp']"
-      /></a>
-      <br />
-      +31612463062
-    </li>
-    <li>
       <a
         href="mailto:chi.toan.luu@gmail.com"
         target="_blank"
